@@ -1,0 +1,231 @@
+body {
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+}
+
+.background img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.3;
+    /* transition: all 0.8s ease-in; */
+}
+
+.heading_container {
+    display: flex;
+    justify-content: center;
+}
+
+h1.heading {
+    position: absolute;
+    color: #fff;
+    display: flex;
+    text-align: center;
+}
+
+
+.next_button {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    top: 120px;
+    position: absolute;
+}
+
+.stamp_flawlessvictory {
+    position: absolute;
+    right: 9vw;
+    z-index: 999;
+    width: 444px;
+    height: 114px;
+    transition: all 0.5s ease-in-out;
+    top: -150px;
+}
+
+.game_container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.player_side {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 100vh;
+}
+
+.player_score {
+    position: absolute;
+    width: 40vw;
+    height: auto;
+    padding: 30px 60px;
+    margin-left: 30px;
+    display: flex;
+}
+
+.player_score img {
+    width: 45px;
+    height: 45px;
+    margin: -10px 4px;
+}
+
+.player_score--row1,
+.player_score--row2,
+.player_score--row3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.player_cards {
+    position: relative;
+    top: calc(100vh - 170px);
+    margin: 0 30px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player_cards img {
+    /* Height and Width divided by 7.5 */
+    width: 133px;
+    height: 150px;
+    margin-left: -50px;
+    cursor: pointer;
+    position: relative;
+}
+
+.computer_side {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+.computer_score {
+    position: absolute;
+    width: 40vw;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.computer_score img {
+    width: 45px;
+    height: 45px;
+    margin: -10px 4px;
+}
+
+.computer_score--row1,
+.computer_score--row2,
+.computer_score--row3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.computer_cards {
+    position: relative;
+    top: calc(100vh - 170px);
+    margin: 0 60px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+}
+
+.computer_cards img {
+    /* Height and Width divided by 7.5 */
+    width: 133px;
+    height: 150px;
+    margin-left: -50px;
+}
+
+img.computer-chosen {
+    /* Height and Width divided by 3.5 */
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    top: -250%;
+    right: 20%;
+    width: 286px;
+    height: 322px;
+}
+
+
+img.player-chosen {
+    /* Height and Width divided by 3.5 */
+    position: absolute;
+    top: -250%;
+    left: 30%;
+    width: 286px;
+    height: 322px;
+}
+
+
+/* RESET button  */
+
+.custom-btn {
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+
+/* 15 */
+.btn-15 {
+    background: #0053b0;
+    border: none;
+    z-index: 1;
+    position: absolute;
+    top: 40px;
+    margin: 30px 0;
+}
+
+.btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #0280cc;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+.btn-15:hover {
+    color: #fff;
+}
+
+.btn-15:hover:after {
+    left: 0;
+    width: 100%;
+}
